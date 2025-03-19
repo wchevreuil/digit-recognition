@@ -1,0 +1,5 @@
+streamlit
+requests
+pillow
+streamlit_drawable_canvas
+psycopg2
