@@ -56,7 +56,7 @@ async def predict(file: UploadFile = File(...)):
     image = ImageOps.invert(image)
 
     enhancer = ImageEnhance.Contrast(image)
-    image = enhancer.enhance(60.0)  # You can adjust this factor if needed
+    image = enhancer.enhance(60.0)
 
     image = transform(image)
 

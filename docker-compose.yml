@@ -2,11 +2,13 @@ version: "3.8"
 
 services:
   service:
+    platform: linux/amd64
     build: ./service
     ports:
       - "8000:8000"
 
   frontend:
+    platform: linux/amd64
     build: ./frontend
     ports:
       - "8501:8501"
@@ -14,6 +16,7 @@ services:
       - service
       - db
   db:
+    platform: linux/amd64
     image: postgres:15
     restart: always
     container_name: postgres_container

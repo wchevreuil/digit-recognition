@@ -23,7 +23,9 @@ with st.sidebar:
         drawing_mode="freedraw",
         key="canvas"
     )
-    st.write(f"**All time accuracy:** {(get_total_correct() / get_total()):.2f}")
+    total = get_total()
+    if total > 0:
+        st.write(f"**All time accuracy:** {(get_total_correct() / total):.2f}")
 
 actual_digit = st.text_input("**True label:**", "")
 
